@@ -1,16 +1,15 @@
-# laundry_app
+# Laundry App
 
-A new Flutter project.
+Simple app to manage laundry, more feature to be added.
 
-## Getting Started
+<row>
+<img  src="https://github.com/rvn9/laundry_app/assets/56660530/bda558f4-4693-4349-8fc0-c07459279c7a" height="500rm">
+  &nbsp
+<img  src="https://github.com/rvn9/laundry_app/assets/56660530/d03e1a4b-5c87-4a04-8aeb-cec3d19e6544" height="500rm">
+  &nbsp
+<img src="https://github.com/rvn9/laundry_app/assets/56660530/85574538-3c6a-4102-8e5b-694980926058" height="500rm" >
+  &nbsp
+  <img src="https://github.com/rvn9/laundry_app/assets/56660530/a7456596-b997-46e8-acdb-e95991447994" height="500rm" >
+  &nbsp
+</row>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

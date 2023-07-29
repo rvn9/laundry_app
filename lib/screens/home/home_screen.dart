@@ -62,6 +62,19 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: ColorName.bittersweet,
       appBar: AppBar(
+        actions: [
+          GestureDetector(
+            onTap: () => _authenticationCubit.signOut(),
+            child: const Padding(
+              padding: EdgeInsets.only(right: 16),
+              child: Icon(
+                Icons.logout,
+                size: 32,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
         elevation: 0,
         backgroundColor: ColorName.bittersweet,
         centerTitle: true,
@@ -95,6 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: ListView(
+                physics: const BouncingScrollPhysics(),
                 children: [
                   BlocBuilder<UserCubit, UserState>(
                     builder: (context, state) => state.maybeWhen(

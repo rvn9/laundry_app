@@ -68,7 +68,7 @@ class _LatestOrderCard extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'IDR 180,00',
+                            'IDR 180,000',
                             style: TextStyle(
                               fontSize: 14.sp,
                               color: ColorName.dodgerBlue,
@@ -82,44 +82,49 @@ class _LatestOrderCard extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  stops: const [
-                    0.1,
-                    0.9,
-                  ],
-                  colors: [
-                    ColorName.dodgerBlue,
-                    ColorName.dodgerBlue.withOpacity(0.43),
-                  ],
-                ),
-                borderRadius: const BorderRadius.only(
-                  topRight: Radius.circular(10),
-                  bottomRight: Radius.circular(10),
-                ),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Assets.icons.file.svg(),
-                  const SizedBox(
-                    height: 8,
+            GestureDetector(
+              behavior: HitTestBehavior.translucent,
+              onTap: () =>
+                  AutoRouter.of(context).push(const InvoiceScreenRoute()),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    stops: const [
+                      0.1,
+                      0.9,
+                    ],
+                    colors: [
+                      ColorName.dodgerBlue,
+                      ColorName.dodgerBlue.withOpacity(0.43),
+                    ],
                   ),
-                  Text(
-                    'Invoice',
-                    style: TextStyle(
-                      fontSize: 10.sp,
-                      color: ColorName.white,
-                      fontWeight: FontWeight.w600,
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
+                  ),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Assets.icons.file.svg(),
+                    const SizedBox(
+                      height: 8,
                     ),
-                  )
-                ],
+                    Text(
+                      'Invoice',
+                      style: TextStyle(
+                        fontSize: 10.sp,
+                        color: ColorName.white,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ],

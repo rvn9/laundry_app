@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,6 +10,9 @@ import 'routes/router.gr.dart';
 void runTestApp() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Injector.initialize();
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+  ));
   runApp(const TestApp2());
 }
 

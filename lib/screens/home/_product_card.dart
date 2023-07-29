@@ -7,7 +7,8 @@ class _ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => null,
+      onTap: () =>
+          AutoRouter.of(context).push(ProductDetailRoute(product: product)),
       child: Padding(
         padding: const EdgeInsets.only(right: 16.0),
         child: Container(
